@@ -32,13 +32,6 @@ A B | Y
 
 ---
 
-## 🧪 Testbenches
-Each module includes a testbench file for simulation:
-- `and_gate_tb.v`
-- `or_gate_tb.v`
-
----
-
 ## 🛠️ Tools
 - Verilog HDL
 - ModelSim / any simulator
