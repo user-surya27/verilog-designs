@@ -39,7 +39,6 @@ A B | Y
 ---
 
 ## 🚀 Future Improvements
-- Add XOR gate
 - Add XNOR gate
 - Design Half Adder and Full Adder
 
