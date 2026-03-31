@@ -38,10 +38,8 @@ A B | Y
 
 ---
 
-## 🚀 Future Improvements
-- Add XNOR gate
-- Design Half Adder and Full Adder
-
+## 🚀 These are the basic gates must to know in verilog
+## 📌 After completing this, check out "verilog" Repo for more.
 ---
 
 ## 👨‍💻 Author
