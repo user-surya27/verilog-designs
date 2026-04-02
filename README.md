@@ -2,7 +2,7 @@
 
 This repository contains basic Verilog HDL programs for learning digital logic design.
 
-## 📌 This repo only for Combinational Codes 
+# 📌 This repo only for Combinational Codes 
 ---
 
 ## 📌 Modules Included
