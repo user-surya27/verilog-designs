@@ -1,24 +1,19 @@
-// Design code for not gate
-module not_gate (
-    input a,
-    output y
-);
-assign y = ~a;
-endmodule
+// a->I1, y->O1, ~->NOT Operator
+// Design code for NOT Gate
+module notgate(a,y);
+  input a;
+  output y;
+  assign y=~a;
+endmodule;
 
 // TB
-module not_gate_tb;
-reg a;
+module nottb;
 wire y;
-not_gate uut (
-    .a(a),
-    .y(y)
-);
-initial begin
-    $display("a | y");
-    $monitor("%b | %b", a, y);
-    a = 0;
-    #10 a = 1;
-    #10 $finish;
-end
+reg a;
+  notgate dut(a,y);
+  initial begin
+    a=0;
+    #1 a=1;
+    #1 a=0;
+  end
 endmodule
