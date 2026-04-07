@@ -1,27 +1,20 @@
-// Design code for XOR gate
-module xor_gate(
-    input a,
-    input b,
-    output y
-);
-    assign y = a ^ b;
+// Design code for XOR Gate
+module xorgate(a,b,y);
+  input a,b;
+  output y;
+  assign y=a^b;
 endmodule
 
+
 // TB
-module xor_gate_tb;
-    reg a, b;
-    wire y;
-    xor_gate uut (
-        .a(a), 
-        .b(b), 
-        .y(y)
-    );
-    initial begin
-        $monitor("Time=%0t | a=%b b=%b | y=%b", $time, a, b, y);
-        a = 0; b = 0; #10; 
-        a = 0; b = 1; #10; 
-        a = 1; b = 0; #10; 
-        a = 1; b = 1; #10;
-        $finish; 
-    end
+module xortb;
+  reg a,b;
+  wire y;
+  xorgate dut(a,b,y);
+  initial begin
+    a=0;b=0;
+    #1 a=0;b=1;
+    #1 a=1;b=0;
+    #1 a=1;b=1;
+  end 
 endmodule
