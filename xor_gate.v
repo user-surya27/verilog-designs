@@ -1,3 +1,4 @@
+// a->I1, b->I2, y->O1, ^->XOR Operator
 // Design code for XOR Gate
 module xorgate(a,b,y);
   input a,b;
