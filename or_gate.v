@@ -1,3 +1,4 @@
+// a->I1, b->I2, y->O1, |->OR Operator
 // Design  code for OR Gate
 module orgate(a,b,y);
   input a,b;
