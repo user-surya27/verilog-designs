@@ -1,3 +1,4 @@
+// Design code for HALF ADDER
 module half_adder (
     input A,
     input B,
