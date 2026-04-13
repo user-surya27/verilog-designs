@@ -21,13 +21,8 @@ module full_adder_tb;
         .Sum(sum),
         .Cout(cout)
     );
-
-    // 3. Provide Stimulus
     initial begin
-        // Monitor outputs in the console
         $monitor("Time=%0t | A=%b B=%b Cin=%b | Sum=%b Cout=%b", $time, a, b, cin, sum, cout);
-
-        // Exhaustive testing of all 8 combinations
         a = 0; b = 0; cin = 0; #10;
         a = 0; b = 0; cin = 1; #10;
         a = 0; b = 1; cin = 0; #10;
@@ -36,7 +31,6 @@ module full_adder_tb;
         a = 1; b = 0; cin = 1; #10;
         a = 1; b = 1; cin = 0; #10;
         a = 1; b = 1; cin = 1; #10;
-
-        $finish; // End simulation
+        $finish; 
     end
 endmodule
