@@ -1,1 +1,1 @@
-// This file for half subtractor
+// This file is for full subtractor
