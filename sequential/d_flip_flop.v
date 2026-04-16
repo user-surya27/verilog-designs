@@ -1,1 +1,15 @@
-// This file is for D Flip Flop
+// Design code for D Flip Flop
+module d_ff (
+    input clk,     
+    input rst_n,  
+    input d,      
+    output reg q  
+);
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            q <= 1'b0; 
+        end else begin
+            q <= d;   
+        end
+    end
+endmodule
