@@ -23,3 +23,35 @@ module jk_ff (
     end
 endmodule
 
+// TB
+module tb_jk_ff;
+    reg clk;
+    reg j;
+    reg k;
+    reg reset;
+    wire q;
+    wire q_bar;
+    jk_ff uut (
+        .clk(clk), 
+        .j(j), 
+        .k(k), 
+        .reset(reset), 
+        .q(q), 
+        .q_bar(q_bar)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        clk = 0;
+        reset = 1;
+        j = 0;
+        k = 0;
+        #10 reset = 0;
+        #10 j = 1; k = 0;
+        #10 j = 0; k = 0;
+        #10 j = 0; k = 1;
+        #10 j = 1; k = 1;
+        #10 reset = 1;
+        #10 reset = 0;
+        #20 $finish;
+    end
+endmodule
