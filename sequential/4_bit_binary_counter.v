@@ -13,3 +13,27 @@ always @(posedge clk) begin
 end
 endmodule
 
+// TB
+module counter_4bit_tb;
+    reg clk;
+    reg reset;
+    wire [3:0] out;
+    counter_4bit uut (
+        .clk(clk),
+        .reset(reset),
+        .out(out)
+    );
+    always #5 clk = ~clk;
+    initial begin
+        clk = 0;
+        reset = 1;
+        #20 reset = 0;
+        #200;
+        reset = 1;
+        #20 reset = 0;
+        #50 $finish;
+    end
+    initial begin
+        $monitor("Time=%0t | reset=%b | out=%d (%b)", $time, reset, out, out);
+    end
+endmodule
